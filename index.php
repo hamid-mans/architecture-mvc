@@ -9,4 +9,4 @@ $Dispatch = new Dispatch();
 if(isset($_GET['url'])) {
     $url = explode('/', $_GET['url']);
 }
-$Routes = new Route();
+$Routes = new Route($url);
