@@ -43,4 +43,8 @@ class Controller
 	public function redirect($file) {
 		header('location: '.$file);
 	}
+
+	public function include($file) {
+		include $this->public . "/include/" . $file . '.php';
+	}
 }

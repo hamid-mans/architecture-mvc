@@ -9,13 +9,13 @@
 class Message extends Model {
 
     public function show($id) {
-        $req = $this->init()->prepare("SELECT * FROM fiche WHERE id = ?");
+        $req = $this->init()->prepare("SELECT * FROM pokes WHERE id = ?");
         $req->execute([$id]);
         return $req->fetch();
     }
 
     public function all() {
-        $req = $this->init()->prepare("SELECT * FROM fiche");
+        $req = $this->init()->prepare("SELECT * FROM pokes");
         $req->execute();
         return $req->fetchAll();
     }
